@@ -1,6 +1,6 @@
 # Bachelor of Science in Computer Science
 
-## Tecnological Institute of Costa Rica
+## Technological Institute of Costa Rica
 
 **2016 - 2020**
 
