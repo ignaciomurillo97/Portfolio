@@ -1,0 +1,25 @@
+[
+  {
+    "label": "GitHub",
+    "href": "https://github.com/ignaciomurillo97",
+    "icon": "github",
+    "detail": "@ignaciomurillo97"
+  },
+  {
+    "label": "LinkedIn",
+    "href": "https://www.linkedin.com/in/ignacio-murillo-masis",
+    "icon": "linkedin",
+    "detail": "ignacio-murillo-masis"
+  },
+  {
+    "label": "Email",
+    "href": "mailto:ignaciomurillo97@gmail.com",
+    "icon": "email",
+    "detail": "ignaciomurillo97@gmail.com"
+  },
+  {
+    "label": "Resume",
+    "href": "/resume.pdf",
+    "icon": "resume"
+  }
+]

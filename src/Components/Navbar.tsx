@@ -1,10 +1,17 @@
 
 import { useState } from 'react';
+import ContactModal from './ContactModal';
 
-const navItems = ['Experience', 'Education', 'Skills', 'Projects', 'Get In Touch!'];
+const navItems = ['Experience', 'Education', 'Skills', 'Projects'];
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
+    const openContactModal = () => {
+        setIsMenuOpen(false);
+        setIsContactOpen(true);
+    };
 
     return (
         <nav className="border-b border-alabaster-gray-700 bg-alabaster-gray-900 text-alabaster-gray-50">
@@ -23,6 +30,13 @@ const Navbar = () => {
                             {item}
                         </a>
                     ))}
+                    <button
+                        type="button"
+                        className="transition-colors hover:text-pacific-blue-300"
+                        onClick={openContactModal}
+                    >
+                        Get In Touch!
+                    </button>
                 </div>
 
                 <button
@@ -53,9 +67,18 @@ const Navbar = () => {
                                 {item}
                             </a>
                         ))}
+                        <button
+                            type="button"
+                            className="rounded-md px-3 py-2 text-left transition-colors hover:bg-alabaster-gray-800 hover:text-pacific-blue-300"
+                            onClick={openContactModal}
+                        >
+                            Get In Touch!
+                        </button>
                     </div>
                 </div>
             )}
+
+            <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
         </nav>
     );
 };

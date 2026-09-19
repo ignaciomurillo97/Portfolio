@@ -1,9 +1,11 @@
-const footerLinks = [
-    { label: 'GitHub', href: 'https://github.com/ignaciomurillo97', icon: 'github' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ignacio-murillo-masis', icon: 'linkedin' },
-    { label: 'Email', href: 'mailto:ignaciomurillo97@gmail.com', icon: 'email' },
-    { label: 'Resume', href: '/resume.pdf', icon: 'resume' },
-];
+import { useEffect, useState } from 'react';
+
+type ContactLink = {
+    label: string;
+    href: string;
+    icon: string;
+    detail?: string;
+};
 
 const FooterIcon = ({ name }: { name: string }) => {
     const paths = {
@@ -22,6 +24,15 @@ const FooterIcon = ({ name }: { name: string }) => {
 };
 
 const Footer = () => {
+    const [footerLinks, setFooterLinks] = useState<ContactLink[]>([]);
+
+    useEffect(() => {
+        fetch('/contact.json')
+            .then((response) => response.json())
+            .then(setFooterLinks)
+            .catch(() => setFooterLinks([]));
+    }, []);
+
     return (
         <footer className="border-t border-alabaster-gray-700 bg-alabaster-gray-950 px-6 py-10 text-alabaster-gray-300">
             <div className="mx-auto flex max-w-6xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
@@ -38,8 +49,8 @@ const Footer = () => {
                             key={link.label}
                             href={link.href}
                             className="inline-flex items-center gap-2 transition-colors hover:text-pacific-blue-300"
-                            target={link.label === 'Resume' ? '_blank' : undefined}
-                            rel={link.label === 'Resume' ? 'noreferrer' : undefined}
+                            target={['GitHub', 'LinkedIn', 'Resume'].includes(link.label) ? '_blank' : undefined}
+                            rel={['GitHub', 'LinkedIn', 'Resume'].includes(link.label) ? 'noreferrer' : undefined}
                         >
                             <FooterIcon name={link.icon} />
                             {link.label}
