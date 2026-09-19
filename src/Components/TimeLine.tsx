@@ -42,7 +42,7 @@ const TimeLine = ({ dataUrl, sectionId, eyebrow, heading, errorMessage }: TimeLi
         };
 
         loadExperience();
-    }, []);
+    }, [dataUrl, errorMessage]);
 
     return (
         <section id={sectionId} className="bg-alabaster-gray-900 px-6 py-20 text-alabaster-gray-50 sm:py-28">
