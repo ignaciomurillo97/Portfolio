@@ -1,16 +1,16 @@
 # Getting Started with Create React App
 
-## Deploying to Cloudflare Pages
+## Deploying to a Cloudflare Worker
 
 The repository includes a GitHub Actions workflow at `.github/workflows/deploy-cloudflare-pages.yml`.
-It builds the site and deploys the `build` directory to Cloudflare Pages whenever changes are pushed to
-`master` or `main`. It can also be started manually from the Actions tab in GitHub.
+It builds the site and deploys the `build` directory as static assets to the `portfolio` Cloudflare
+Worker whenever changes are pushed to `master` or `main`. It can also be started manually from the
+Actions tab in GitHub.
 
 Add these repository secrets in **Settings > Secrets and variables > Actions** before the first deployment:
 
-- `CLOUDFLARE_API_TOKEN`: API token with the `Cloudflare Pages > Edit` permission.
-- `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account ID that owns the Pages project.
-- `CLOUDFLARE_PAGES_PROJECT_NAME`: the existing Cloudflare Pages project name.
+- `CLOUDFLARE_API_TOKEN`: API token with `Workers Scripts > Edit` permission for the target account.
+- `CLOUDFLARE_ACCOUNT_ID`: the Cloudflare account ID that owns the Worker.
 
 The API token is used only by GitHub Actions and is never exposed to the browser.
 

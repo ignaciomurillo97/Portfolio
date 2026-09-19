@@ -11,13 +11,13 @@ The portfolio is a static React application built with Create React App.
 
 ## Phase 1: Deploy the Static Portfolio
 
-Recommended provider: Cloudflare Pages.
+Recommended provider: Cloudflare Workers static assets.
 
 Configuration:
 
 - Build command: `npm run build`
 - Output directory: `build`
-- Deployment source: GitHub repository
+- Deployment source: GitHub repository through Actions
 - Automatic deployment: enabled for pushes to the main branch
 
 Alternative providers:
@@ -27,7 +27,7 @@ Alternative providers:
 - GitHub Pages
 - Render Static Sites
 
-Cloudflare Pages is the recommended option because it provides free CDN hosting, HTTPS, automatic deployments, and a good migration path toward Cloudflare Workers or other backend services.
+Cloudflare Workers is the current deployment target because the portfolio is configured as the existing `portfolio` Worker with static assets. It provides HTTPS, global delivery, automatic deployments through GitHub Actions, and a direct path toward serverless API functionality.
 
 ## Phase 2: Move Portfolio Data to a Database
 
@@ -110,7 +110,7 @@ API keys must remain on the server and must never be exposed in React client cod
 ## Recommended Low-Cost Architecture
 
 ```text
-Cloudflare Pages
+Cloudflare Workers
         |
         v
 React portfolio frontend
