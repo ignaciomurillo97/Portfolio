@@ -12,7 +12,7 @@
     "date": "2021-2023",
     "organization": "Microsoft",
     "title": "Software Engineer",
-    "description": "Joined a brand new team chartered to create a PubSub SDK library designed to standardize message schemas for Teams Management Infrastructure. Designed robust contracts to handle dead-letter queues, out of order messag delivery, replay and rollback, as well as high volume backfill of new systems. Implemented CI/CD pipelines, testing and worked with partner teams to implement the SDK on their code-bases.",
+    "description": "Joined a brand new team chartered to create a PubSub SDK library designed to standardize message schemas for Teams Management Infrastructure. Designed robust contracts to handle dead-letter queues, out of order message delivery, replay and rollback, as well as high volume backfill of new systems. Implemented CI/CD pipelines, testing and worked with partner teams to implement the SDK on their code-bases.",
     "icon": "PC",
     "tags": [".NET", "C#", "Azure", "AI", "Devops"],
     "slug": "microsoft-pubsub-sdk"
@@ -30,7 +30,7 @@
     "date": "2019 - 2020",
     "organization": "Intel",
     "title": "Student Software Engineer",
-    "description": "Owned and developed internal web apps and automations for Intel IT org. These included \"Coud Helper\", a portal for internal teams to submit requests for Cloud resources to be provisioned in either public clouds (Azure, AWS, GCP, etc.) or internal cloud offerings. Also a service for aggregating and visualizing data across the organization used to track key initiatives, for example tracking Windowds 2008 depreceation initiative saving millions in extended support contracts.",
+    "description": "Owned and developed internal web apps and automations for Intel IT org. These included \"Cloud Helper\", a portal for internal teams to submit requests for Cloud resources to be provisioned in either public clouds (Azure, AWS, GCP, etc.) or internal cloud offerings. Also a service for aggregating and visualizing data across the organization used to track key initiatives, for example tracking Windows 2008 deprecation initiative saving millions in extended support contracts.",
     "icon": "PC",
     "tags": ["React.JS", "Node.JS", "Postgres", "Docker", "PowerBI", "Cloud"],
     "slug": "intel-cloud-automation"

@@ -1,0 +1,29 @@
+{
+  "version": "0.2",
+  "language": "en,en-GB",
+  "files": ["**/*.{md,json,ts,tsx,css,yml,yaml,jsonc}"],
+  "ignorePaths": [
+    "node_modules/**",
+    "build/**",
+    "public/IM-Banner.svg",
+    "package-lock.json"
+  ],
+  "words": [
+    "alabaster",
+    "Cloudflare",
+    "Devops",
+    "GCP",
+    "Supabase",
+    "Turso",
+    "TTFB",
+    "Masis",
+    "Murillo",
+    "Postgres",
+    "PubSub",
+    "Tailwind",
+    "Wrangler",
+    "ignaciomurillo",
+    "pgvector",
+    "yaml"
+  ]
+}

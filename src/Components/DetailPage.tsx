@@ -100,14 +100,6 @@ const DetailPage = () => {
   );
 };
 
-const ErrorPage = () => {
-
-}
-
-const Content = () => {
-
-}
-
 const DetailSkeleton = () => (
   <div className="animate-pulse">
     <div className="h-4 w-28 rounded bg-alabaster-gray-700" />
