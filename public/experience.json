@@ -5,7 +5,8 @@
     "title": "Software Engineer",
     "description": "Designed, developed and maintained backend infrastructure for Microsoft Teams' Policy Administration platform. Modernized services to keep up with the growing demand for remote work and gained invaluable experience leveraging AI models from one of the leading companies in the space.",
     "icon": "PC",
-    "tags": [".NET", "C#", "Azure", "AI", "Devops"]
+    "tags": [".NET", "C#", "Azure", "AI", "Devops"],
+    "slug": "microsoft-policy-administration"
   },
   {
     "date": "2021-2023",
@@ -13,7 +14,8 @@
     "title": "Software Engineer",
     "description": "Joined a brand new team chartered to create a PubSub SDK library designed to standardize message schemas for Teams Management Infrastructure. Designed robust contracts to handle dead-letter queues, out of order messag delivery, replay and rollback, as well as high volume backfill of new systems. Implemented CI/CD pipelines, testing and worked with partner teams to implement the SDK on their code-bases.",
     "icon": "PC",
-    "tags": [".NET", "C#", "Azure", "AI", "Devops"]
+    "tags": [".NET", "C#", "Azure", "AI", "Devops"],
+    "slug": "microsoft-pubsub-sdk"
   },
   {
     "date": "2020 - 2021",
@@ -21,7 +23,8 @@
     "title": "Software Engineer",
     "description": "Contributed to modernizing System Test software validating every CPU manufactured by Intel. This involved working on a compiler for a domain-specific test package language and data collection to inform the binning process for CPUs. Gained experience maintaining utmost quality, reliability and efficiency in an environment where downtime was incredibly expensive.",
     "icon": "PC",
-    "tags": [".NET", "C#", "Docker", "Azure"]
+    "tags": [".NET", "C#", "Docker", "Azure"],
+    "slug": "intel-system-test"
   },
   {
     "date": "2019 - 2020",
@@ -29,6 +32,7 @@
     "title": "Student Software Engineer",
     "description": "Owned and developed internal web apps and automations for Intel IT org. These included \"Coud Helper\", a portal for internal teams to submit requests for Cloud resources to be provisioned in either public clouds (Azure, AWS, GCP, etc.) or internal cloud offerings. Also a service for aggregating and visualizing data across the organization used to track key initiatives, for example tracking Windowds 2008 depreceation initiative saving millions in extended support contracts.",
     "icon": "PC",
-    "tags": ["React.JS", "Node.JS", "Postgres", "Docker", "PowerBI", "Cloud"]
+    "tags": ["React.JS", "Node.JS", "Postgres", "Docker", "PowerBI", "Cloud"],
+    "slug": "intel-cloud-automation"
   }
 ]
