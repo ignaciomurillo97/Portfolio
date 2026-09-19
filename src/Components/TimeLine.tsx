@@ -1,33 +1,41 @@
 
 import { useEffect, useState } from 'react';
 
-type ExperienceItem = {
+export type TimelineItem = {
     date: string;
-    company: string;
-    role: string;
+    organization: string;
+    title: string;
     description: string;
     icon: string;
-    technologies: string[];
+    tags: string[];
 };
 
-const TimeLine = () => {
-    const [experienceItems, setExperienceItems] = useState<ExperienceItem[]>([]);
+type TimeLineProps = {
+    dataUrl: string;
+    sectionId: string;
+    eyebrow: string;
+    heading: string;
+    errorMessage: string;
+};
+
+const TimeLine = ({ dataUrl, sectionId, eyebrow, heading, errorMessage }: TimeLineProps) => {
+    const [items, setItems] = useState<TimelineItem[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const loadExperience = async () => {
             try {
-                const response = await fetch('/experience.json');
+                const response = await fetch(dataUrl);
 
                 if (!response.ok) {
                     throw new Error('Unable to load experience');
                 }
 
-                const items: ExperienceItem[] = await response.json();
-                setExperienceItems(items);
+                const timelineItems: TimelineItem[] = await response.json();
+                setItems(timelineItems);
             } catch {
-                setError('Experience could not be loaded right now.');
+                setError(errorMessage);
             } finally {
                 setIsLoading(false);
             }
@@ -37,13 +45,13 @@ const TimeLine = () => {
     }, []);
 
     return (
-        <section id="experience" className="bg-alabaster-gray-900 px-6 py-20 text-alabaster-gray-50 sm:py-28">
+        <section id={sectionId} className="bg-alabaster-gray-900 px-6 py-20 text-alabaster-gray-50 sm:py-28">
             <div className="mx-auto max-w-6xl">
                 <div className="mb-16 max-w-2xl">
                     <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-pacific-blue-300">
-                        Experience
+                        {eyebrow}
                     </p>
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Where I have made an impact</h2>
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{heading}</h2>
                 </div>
 
                 <div className="relative">
@@ -56,8 +64,8 @@ const TimeLine = () => {
                             <p className="pl-12 text-alabaster-gray-300 lg:col-span-2 lg:col-start-2 lg:pl-16">{error}</p>
                         )}
 
-                        {!isLoading && !error && experienceItems.map((item) => (
-                            <article key={`${item.company}-${item.date}`} className="relative grid lg:grid-cols-3">
+                        {!isLoading && !error && items.map((item) => (
+                            <article key={`${item.organization}-${item.date}`} className="relative grid lg:grid-cols-3">
                                 <div className="pb-4 pl-12 lg:py-2 lg:pl-0 lg:pr-12 lg:text-right">
                                     <p className="text-sm font-medium text-pacific-blue-300">{item.date}</p>
                                 </div>
@@ -67,16 +75,16 @@ const TimeLine = () => {
                                 </div>
 
                                 <div className="pl-12 lg:col-span-2 lg:pl-16">
-                                    <p className="text-sm font-medium text-alabaster-gray-300">{item.company}</p>
-                                    <h3 className="mt-1 text-2xl font-semibold text-alabaster-gray-50">{item.role}</h3>
+                                    <p className="text-sm font-medium text-alabaster-gray-300">{item.organization}</p>
+                                    <h3 className="mt-1 text-2xl font-semibold text-alabaster-gray-50">{item.title}</h3>
                                     <p className="mt-4 max-w-xl leading-7 text-alabaster-gray-300">{item.description}</p>
                                     <div className="mt-5 flex flex-wrap gap-2">
-                                        {item.technologies.map((technology) => (
+                                        {item.tags.map((tag) => (
                                             <span
-                                                key={technology}
+                                                key={tag}
                                                 className="rounded-full border border-pacific-blue-500/40 bg-pacific-blue-500/10 px-3 py-1 text-xs font-medium text-pacific-blue-200"
                                             >
-                                                {technology}
+                                                {tag}
                                             </span>
                                         ))}
                                     </div>

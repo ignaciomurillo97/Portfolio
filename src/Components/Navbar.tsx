@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 
-const navItems = ['Experience', 'Skills', 'Projects', 'Get In Touch!'];
+const navItems = ['Experience', 'Education', 'Skills', 'Projects', 'Get In Touch!'];
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -7,7 +7,20 @@ function App() {
     <div className="bg-alabaster-gray-800 text-white my-auto">
       <Navbar/>
       <Banner />
-      <TimeLine />
+      <TimeLine
+        dataUrl="/experience.json"
+        sectionId="experience"
+        eyebrow="Experience"
+        heading="Where I have made an impact"
+        errorMessage="Experience could not be loaded right now."
+      />
+      <TimeLine
+        dataUrl="/education.json"
+        sectionId="education"
+        eyebrow="Education"
+        heading="Where I built my foundation"
+        errorMessage="Education could not be loaded right now."
+      />
     </div>
   );
 }
