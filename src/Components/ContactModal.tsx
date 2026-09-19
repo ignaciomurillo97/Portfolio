@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 type ContactLink = {
     label: string;
@@ -68,7 +69,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
         return null;
     }
 
-    return (
+    return createPortal(
         <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-carbon-black-950/80 px-6 py-8"
             role="presentation"
@@ -125,7 +126,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                     )}
                 </div>
             </section>
-        </div>
+        </div>,
+        document.body,
     );
 };
 

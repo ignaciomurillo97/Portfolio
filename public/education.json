@@ -5,6 +5,7 @@
     "title": "Bachelor of Science in Computer Science",
     "description": "Gained solid foudnations in one of Costa Rica's most prestigious engineering universities. Programme focused on a blend between highly academic computer science with delivery focused software engineering.",
     "icon": "U",
-    "tags": ["Computer Science", "Software Engineering"]
+    "tags": ["Computer Science", "Software Engineering"],
+    "slug": "computer-science-degree"
   }
 ]

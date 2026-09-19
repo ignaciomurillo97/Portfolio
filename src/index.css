@@ -4,11 +4,113 @@
 
 html {
 	scroll-behavior: smooth;
+	background-color: #0f1115;
+}
+
+body {
+	margin: 0;
+	background-color: #0f1115;
+	overflow-x: hidden;
+}
+
+#root {
+	min-height: 100vh;
+	background-color: #0f1115;
 }
 
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
+	}
+
+	.page-transition {
+		animation: none;
+	}
+}
+
+@keyframes page-enter-from-right {
+	from {
+		transform: translateX(20px);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes page-enter-from-left {
+	from {
+		transform: translateX(-20px);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+.page-transition-detail {
+	animation: page-enter-from-right 350ms ease-out both;
+}
+
+.page-transition-home {
+	animation: page-enter-from-left 350ms ease-out both;
+}
+
+@layer components {
+	.markdown-content {
+		@apply max-w-none text-lg leading-8 text-alabaster-gray-100;
+	}
+
+	.markdown-content h1 {
+		@apply mb-6 text-4xl font-bold tracking-tight text-alabaster-gray-50 sm:text-5xl;
+	}
+
+	.markdown-content h2 {
+		@apply mb-4 mt-12 text-2xl font-semibold text-alabaster-gray-50 sm:text-3xl;
+	}
+
+	.markdown-content h3 {
+		@apply mb-3 mt-10 text-xl font-semibold text-pacific-blue-200;
+	}
+
+	.markdown-content p {
+		@apply my-5;
+	}
+
+	.markdown-content strong {
+		@apply font-semibold text-alabaster-gray-50;
+	}
+
+	.markdown-content ul {
+		@apply my-6 list-disc space-y-2 pl-6;
+	}
+
+	.markdown-content ol {
+		@apply my-6 list-decimal space-y-2 pl-6;
+	}
+
+	.markdown-content li {
+		@apply pl-2;
+	}
+
+	.markdown-content a {
+		@apply text-pacific-blue-300 underline decoration-pacific-blue-500/50 underline-offset-4 transition-colors hover:text-pacific-blue-200;
+	}
+
+	.markdown-content blockquote {
+		@apply my-8 border-l-2 border-pacific-blue-400 pl-6 italic text-alabaster-gray-400;
+	}
+
+	.markdown-content code {
+		@apply rounded bg-alabaster-gray-800 px-1.5 py-0.5 font-mono text-sm text-pacific-blue-200;
+	}
+
+	.markdown-content pre {
+		@apply my-8 overflow-x-auto rounded-md bg-carbon-black-950 p-5;
+	}
+
+	.markdown-content pre code {
+		@apply bg-transparent p-0 text-sm text-alabaster-gray-200;
 	}
 }
 
