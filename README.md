@@ -3,9 +3,16 @@
 ## Deploying to a Cloudflare Worker
 
 The repository includes a GitHub Actions workflow at `.github/workflows/deploy-cloudflare-pages.yml`.
-It builds the site and deploys the `build` directory as static assets to the `portfolio` Cloudflare
-Worker whenever changes are pushed to `master` or `main`. It can also be started manually from the
-Actions tab in GitHub.
+Changes pushed to `master` are built once and uploaded as an immutable version of the `portfolio`
+Worker with the `staging` preview alias. The same version is promoted to 100% of production traffic
+after the `production` GitHub environment approval is granted.
+
+To require approval, create a GitHub environment named `production` under **Settings > Environments**
+and add yourself as a required reviewer. The production job will pause until that approval is given.
+
+The staging preview uses the existing `portfolio` Worker and the alias configured by Wrangler. It does
+not create a separate Worker. The production job promotes the version tagged with the commit SHA, so
+the reviewed staging artifact is the one deployed to production.
 
 Add these repository secrets in **Settings > Secrets and variables > Actions** before the first deployment:
 

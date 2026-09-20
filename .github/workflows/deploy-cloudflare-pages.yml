@@ -4,18 +4,16 @@ on:
   push:
     branches:
       - master
-      - main
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: cloudflare-worker-production
+  group: cloudflare-worker-release
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  upload-preview:
     runs-on: ubuntu-latest
     env:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -40,5 +38,18 @@ jobs:
       - name: Build site
         run: npm run build
 
-      - name: Deploy to Cloudflare Worker
-        run: npx wrangler deploy
+      - name: Upload version to staging
+        run: npx wrangler versions upload --assets ./build --preview-alias staging --tag "$GITHUB_SHA" --message "Staging $GITHUB_SHA"
+
+  promote-production:
+    needs: upload-preview
+    environment:
+      name: production
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+    steps:
+      - name: Promote reviewed version to production
+        run: npx wrangler versions deploy --name portfolio --version-tag "$GITHUB_SHA@100" --yes --message "Production $GITHUB_SHA"
