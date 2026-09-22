@@ -45,7 +45,13 @@
     "title": "AI-Assisted Engineering Tooling",
     "description": "Built agent-based tooling that parallelizes builds across 12+ projects, automates on-call report assembly via MCP servers, and diffs large policy-change logs with a Longest Common Substring algorithm.",
     "icon": "AI",
-    "tags": ["AI Agents", "MCP", "Automation", "Algorithms", "Developer Productivity"],
+    "tags": [
+      "AI Agents",
+      "MCP",
+      "Automation",
+      "Algorithms",
+      "Developer Productivity"
+    ],
     "slug": "ai-assisted-engineering",
     "visibleInTimeline": false
   }

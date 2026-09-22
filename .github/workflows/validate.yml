@@ -25,8 +25,11 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version-file: .nvmrc
           cache: npm
+
+      - name: Use matching npm version
+        run: npm install -g npm@11.19.1
 
       - name: Validate npm lockfile
         run: npm ci --dry-run --ignore-scripts
