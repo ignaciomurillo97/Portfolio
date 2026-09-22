@@ -1,4 +1,4 @@
-# Hello Perform
+# System Modernization
 
 ## Microsoft: Policy Administration modernization
 
@@ -14,7 +14,7 @@ The monolithic dependency model made deployments painful and fragile. Coordinati
 
 We evaluated two options: a large refactor of the existing codebase to run as a .NET Core console-hosted app, or extracting it into a standalone service by forking the existing Administration Gateway and hosting the policy layer independently. We chose the second approach because it was faster, safer, and reusable by other teams looking to modernize their own dependencies.
 
-I helped lead the refactor and rollout: we split the service from the shared NuGet, updated the Administration Gateway to call the new service as a proxy, and used feature flags to enable gradual production rollout. I then owned the deployment work in Pre-Prod and Production across multiple public regions, including Azure DevOps pipeline setup, EV2 stages, and monitoring/logging integration.
+I helped lead the refactor and rollout. We split the service from the shared NuGet, updated the Administration Gateway to call the new service as a proxy, and used feature flags to enable gradual production rollout. I then owned the deployment work in Pre-Prod and Production across multiple public regions, including Azure DevOps pipeline setup, EV2 stages, and monitoring/logging integration.
 
 ### Operational impact
 

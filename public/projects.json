@@ -1,20 +1,58 @@
 [
   {
     "date": "Selected work",
+    "organization": "Microsoft",
+    "title": "System Modernization",
+    "description": "Migrated a shared Microsoft Teams policy-management NuGet into a standalone service, reducing deployment fragility and enabling safer regional rollouts and operational modernization.",
+    "icon": "SM",
+    "tags": [".NET", "C#", "Azure", "Kubernetes", "DevOps", "Modernization"],
+    "slug": "system-modernization",
+    "visibleInTimeline": true
+  },
+  {
+    "date": "Selected work",
     "organization": "Intel",
     "title": "Cloud Helper",
-    "description": "A portal for internal teams to request cloud resources across public and internal cloud offerings, supported by automation and workflow tooling.",
+    "description": "Self-service portal for internal teams to request and provision cloud resources across Azure, AWS, GCP, and internal offerings, paired with workflow automation and operational reporting.",
     "icon": "CH",
-    "tags": ["React", "Node.js", "Postgres", "Cloud", "Automation"],
-    "slug": "cloud-helper"
+    "tags": ["React", "Node.js", "PostgreSQL", "Cloud", "Automation"],
+    "slug": "cloud-helper",
+    "visibleInTimeline": true
   },
   {
     "date": "Selected work",
     "organization": "Microsoft",
     "title": "PubSub SDK",
-    "description": "A standardized SDK for message schemas across Teams Management Infrastructure, designed for replay, rollback, dead-letter queues, and high-volume backfills.",
+    "description": "Shared messaging SDK for Teams Management Infrastructure, standardizing contracts for replay, rollback, dead-letter handling, and large-scale backfill scenarios.",
     "icon": "PS",
     "tags": [".NET", "C#", "Azure", "Messaging", "CI/CD"],
-    "slug": "pubsub-sdk"
+    "slug": "pubsub-sdk",
+    "visibleInTimeline": true
+  },
+  {
+    "date": "Selected work",
+    "organization": "Microsoft",
+    "title": "Test Account Security Compliance Automation",
+    "description": "Hardened test account systems after a security breach with periodic account expiry, strict authentication requirements, automated onboarding, and the org's first Federated Identity Credential (FIC)-based authentication for test accounts.",
+    "icon": "TA",
+    "tags": ["Security", "Automation", "FIC", "Zero Trust", "Azure"],
+    "slug": "test-account-security-automation",
+    "visibleInTimeline": false
+  },
+  {
+    "date": "Selected work",
+    "organization": "Microsoft",
+    "title": "AI-Assisted Engineering Tooling",
+    "description": "Built agent-based tooling that parallelizes builds across 12+ projects, automates on-call report assembly via MCP servers, and diffs large policy-change logs with a Longest Common Substring algorithm.",
+    "icon": "AI",
+    "tags": [
+      "AI Agents",
+      "MCP",
+      "Automation",
+      "Algorithms",
+      "Developer Productivity"
+    ],
+    "slug": "ai-assisted-engineering",
+    "visibleInTimeline": false
   }
 ]

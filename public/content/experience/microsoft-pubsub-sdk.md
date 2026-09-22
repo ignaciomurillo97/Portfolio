@@ -4,10 +4,11 @@
 
 **2021 - 2023**
 
-Joined a new team building a PubSub SDK to standardize message schemas across Teams Management Infrastructure. Designed contracts for dead-letter queues, out-of-order message delivery, replay, rollback, and high-volume backfills.
+Helped create a PubSub SDK to standardize messaging contracts across Teams Management Infrastructure. The library provided common patterns for dead-letter queues, out-of-order delivery, replay and rollback flows, and large-scale backfills, enabling partner teams to adopt safer, more consistent integration patterns across distributed services.
 
 ### Focus areas
 
 - Distributed messaging
+- Contract design and reliability
 - CI/CD pipelines
 - Partner-team integrations
