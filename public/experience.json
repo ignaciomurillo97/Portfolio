@@ -3,36 +3,40 @@
     "date": "2023-2026",
     "organization": "Microsoft",
     "title": "Software Engineer",
-    "description": "Designed, developed and maintained backend infrastructure for Microsoft Teams' Policy Administration platform. Modernized services to keep up with the growing demand for remote work and gained invaluable experience leveraging AI models from one of the leading companies in the space.",
-    "icon": "PC",
-    "tags": [".NET", "C#", "Azure", "AI", "Devops"],
-    "slug": "microsoft-policy-administration"
+    "description": "Migrated critical Microsoft Teams policy-management infrastructure from a shared NuGet dependency into a standalone service, modernizing deployment patterns and improving service reliability in highly regulated cloud environments.",
+    "icon": "SM",
+    "tags": [".NET", "C#", "Kubernetes", "Azure", "Cloud", "Modernization"],
+    "slug": "microsoft-policy-administration",
+    "visibleInTimeline": true
   },
   {
     "date": "2021-2023",
     "organization": "Microsoft",
     "title": "Software Engineer",
-    "description": "Joined a brand new team chartered to create a PubSub SDK library designed to standardize message schemas for Teams Management Infrastructure. Designed robust contracts to handle dead-letter queues, out of order message delivery, replay and rollback, as well as high volume backfill of new systems. Implemented CI/CD pipelines, testing and worked with partner teams to implement the SDK on their code-bases.",
+    "description": "Designed and shipped a PubSub SDK to standardize messaging contracts across Teams Management Infrastructure. Built support for dead-letter queues, replay and rollback flows, out-of-order delivery, and large-scale backfills while partnering with teams to adopt safer integration patterns.",
     "icon": "PC",
-    "tags": [".NET", "C#", "Azure", "AI", "Devops"],
-    "slug": "microsoft-pubsub-sdk"
+    "tags": [".NET", "C#", "Azure", "Messaging", "CI/CD"],
+    "slug": "microsoft-pubsub-sdk",
+    "visibleInTimeline": true
   },
   {
     "date": "2020 - 2021",
     "organization": "Intel",
     "title": "Software Engineer",
-    "description": "Contributed to modernizing System Test software validating every CPU manufactured by Intel. This involved working on a compiler for a domain-specific test package language and data collection to inform the binning process for CPUs. Gained experience maintaining utmost quality, reliability and efficiency in an environment where downtime was incredibly expensive.",
+    "description": "Modernized system-test tooling for Intel CPU validation, including a compiler for a domain-specific test package language and data pipelines that informed product binning and manufacturing quality decisions. Improved reliability and efficiency in a high-cost QA environment.",
     "icon": "PC",
-    "tags": [".NET", "C#", "Docker", "Azure"],
-    "slug": "intel-system-test"
+    "tags": ["C#", ".NET", "Compiler", "Automation", "QA"],
+    "slug": "intel-system-test",
+    "visibleInTimeline": true
   },
   {
     "date": "2019 - 2020",
     "organization": "Intel",
     "title": "Student Software Engineer",
-    "description": "Owned and developed internal web apps and automations for Intel IT org. These included \"Cloud Helper\", a portal for internal teams to submit requests for Cloud resources to be provisioned in either public clouds (Azure, AWS, GCP, etc.) or internal cloud offerings. Also a service for aggregating and visualizing data across the organization used to track key initiatives, for example tracking Windows 2008 deprecation initiative saving millions in extended support contracts.",
+    "description": "Developed and maintained internal cloud automation tools for Intel IT, including Cloud Helper—a self-service portal for requesting and provisioning cloud resources across Azure, AWS, GCP, and internal offerings. Also built analytics workflows for tracking cross-org initiatives and platform modernization efforts.",
     "icon": "PC",
-    "tags": ["React.JS", "Node.JS", "Postgres", "Docker", "PowerBI", "Cloud"],
-    "slug": "intel-cloud-automation"
+    "tags": ["React", "Node.js", "PostgreSQL", "Docker", "Cloud", "Automation"],
+    "slug": "intel-cloud-automation",
+    "visibleInTimeline": true
   }
 ]

@@ -9,6 +9,7 @@ export type TimelineItem = {
   icon: string;
   tags: string[];
   slug?: string;
+  visibleInTimeline?: boolean;
 };
 
 type TimeLineProps = {
@@ -31,6 +32,9 @@ const TimeLine = ({
   const [items, setItems] = useState<TimelineItem[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Only visibleInTimeline items render by default; hidden items surface via future search.
+  const visibleItems = items.filter((item) => item.visibleInTimeline !== false);
 
   useEffect(() => {
     const loadExperience = async () => {
@@ -82,7 +86,7 @@ const TimeLine = ({
 
             {!isLoading &&
               !error &&
-              items.map((item) => (
+              visibleItems.map((item) => (
                 <article
                   key={`${item.organization}-${item.date}`}
                   className="relative grid lg:grid-cols-3"

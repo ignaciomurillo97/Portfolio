@@ -21,6 +21,11 @@ Add these repository secrets in **Settings > Secrets and variables > Actions** b
 
 The API token is used only by GitHub Actions and is never exposed to the browser.
 
+## Content Structure
+
+See [CONTENT_STRUCTURE.md](CONTENT_STRUCTURE.md) for how JSON index files, Markdown detail pages,
+slugs, and content routes work together.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

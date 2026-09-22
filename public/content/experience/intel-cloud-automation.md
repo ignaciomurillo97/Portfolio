@@ -4,10 +4,11 @@
 
 **2019 - 2020**
 
-Owned internal web applications and automations for Intel IT, including a portal for requesting cloud resources and services for aggregating and visualizing organization-wide initiatives.
+Developed and operated internal cloud automation tools for Intel IT, including Cloud Helper—a self-service portal for requesting and provisioning cloud resources across Azure, AWS, GCP, and internal offerings. I also built reporting and visualization workflows to track platform initiatives across the organization, helping teams monitor modernization work and reduce manual coordination overhead.
 
 ### Focus areas
 
 - React and Node.js applications
 - Cloud automation
+- Workflow tooling
 - Data visualization
