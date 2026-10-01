@@ -1,32 +1,25 @@
-# Hello Perform
+# Microsoft: Modern Policy Administration
 
-## Microsoft: Policy Administration modernization
+## Software Engineer
 
 **2023 - 2026**
 
-Our team owned the largest and most active NuGet in the Microsoft Teams policy-management ecosystem. It was consumed by the Teams Administration Gateway and other services, which created a major deployment bottleneck: a change in one package could cascade through multiple environments and regions, causing slow rollouts and frequent rollbacks.
+### What I worked on
 
-### The challenge
+Every organization in teams can set policies to affect the behaviour of their system and what their users are allowed to do. For instance, should users join meetings right away or be held in the lobby until let in by the organizer? Should users be allowed to record meetings? Are gifs allowed?
 
-The monolithic dependency model made deployments painful and fragile. Coordinating changes across teams in different time zones created operational risk, and the platform had grown in a way that made it difficult to isolate regressions or roll out safely. The solution was to move our policy-management logic out of the shared library and into a standalone service.
+Admins need to be able to manage and assign well over 100 types of policies in organizations that can reach tens of thousands of users. In this team I worked on developing and maintaining the systems that allow this to happen at scale for  millions of users world wide.
 
-### The migration
+### Projects
 
-We evaluated two options: a large refactor of the existing codebase to run as a .NET Core console-hosted app, or extracting it into a standalone service by forking the existing Administration Gateway and hosting the policy layer independently. We chose the second approach because it was faster, safer, and reusable by other teams looking to modernize their own dependencies.
+* Collaborated on design and proof-of-concept to migrate a shared library out of a monolithic API gateway into an independent service, then owned the pre-production and production rollout on Azure Kubernetes, including logging, monitoring, and metrics.
+* Led hardening of test-tenant account security following a security incident: automated account provisioning (cutting onboarding from multi-day manual work to fully automated) and implemented the org’s first FIC-based authentication for test accounts, later adopted by other teams.
+* Designed and implemented features for a PubSub SDK, including standardized order event handling, dead-letter queues, and bulk backfill tooling for migrating data during system deprecations, and for a job queue modernization effort improving reliability of distributed job processing.
+* Participated in on-call rotations owning deployments, customer incidents, alerts, and security incidents; collaborated with partner teams and SREs to troubleshoot distributed system failures, including in air-gapped environments with restricted access.
+* Worked in regulated cloud environments with GDPR, sovereign cloud, air-gapped deployments, and region-specific clouds.
+* Improved developer productivity with agent-based workflows, including build parallelization across 12+ projects that reduced build time by 60%.
 
-I helped lead the refactor and rollout: we split the service from the shared NuGet, updated the Administration Gateway to call the new service as a proxy, and used feature flags to enable gradual production rollout. I then owned the deployment work in Pre-Prod and Production across multiple public regions, including Azure DevOps pipeline setup, EV2 stages, and monitoring/logging integration.
-
-### Operational impact
-
-This project was especially valuable because it solved a long-standing deployment pain point while deepening my knowledge of Azure infrastructure, Kubernetes, pipeline automation, observability, and operational ownership. I worked closely with the Gateway team to migrate telemetry and dashboards, and I fixed stale ARM templates and deployment artifacts that had drifted over time.
-
-### Lessons learned
-
-This effort also taught me a valuable engineering lesson: large modernization projects need frequent milestone checks, early escalation, and a realistic way to measure risk. The original plan was more optimistic than the execution timeline, and we had to cut scope and extend the ETA. I used that experience to improve how I manage future projects by setting clearer checkpoints, surfacing blockers earlier, and proposing mitigation plans before they become delivery risks.
-
-### Focus areas
-
-- Service extraction and modernization
-- Azure DevOps and EV2 deployment
-- Kubernetes and regulated cloud operations
-- Logging, monitoring, and rollout safety
+### Focus Areas
+- Distributed system design
+- Safe deployment practices
+- High availability
