@@ -6,7 +6,6 @@ export type TimelineItem = {
   organization: string;
   title: string;
   description: string;
-  icon: string;
   tags: string[];
   slug?: string;
   visibleInTimeline?: boolean;
@@ -98,7 +97,6 @@ const TimeLine = ({
                   </div>
 
                   <div className="absolute left-4 top-0 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full border-4 border-alabaster-gray-900 bg-pacific-blue-500 text-[10px] font-bold text-alabaster-gray-950 lg:left-1/3">
-                    {item.icon}
                   </div>
 
                   <div className="pl-12 lg:col-span-2 lg:pl-16">

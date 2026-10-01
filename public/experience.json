@@ -4,7 +4,6 @@
     "organization": "Microsoft",
     "title": "Software Engineer",
     "description": "Migrated critical Microsoft Teams policy-management infrastructure from a shared NuGet dependency into a standalone service, modernizing deployment patterns and improving service reliability in highly regulated cloud environments.",
-    "icon": "SM",
     "tags": [".NET", "C#", "Kubernetes", "Azure", "Cloud", "Modernization"],
     "slug": "microsoft-policy-administration",
     "visibleInTimeline": true
@@ -14,7 +13,6 @@
     "organization": "Microsoft",
     "title": "Software Engineer",
     "description": "Designed and shipped a PubSub SDK to standardize messaging contracts across Teams Management Infrastructure. Built support for dead-letter queues, replay and rollback flows, out-of-order delivery, and large-scale backfills while partnering with teams to adopt safer integration patterns.",
-    "icon": "PC",
     "tags": [".NET", "C#", "Azure", "Messaging", "CI/CD"],
     "slug": "microsoft-pubsub-sdk",
     "visibleInTimeline": true
@@ -24,7 +22,6 @@
     "organization": "Intel",
     "title": "Software Engineer",
     "description": "Modernized system-test tooling for Intel CPU validation, including a compiler for a domain-specific test package language and data pipelines that informed product binning and manufacturing quality decisions. Improved reliability and efficiency in a high-cost QA environment.",
-    "icon": "PC",
     "tags": ["C#", ".NET", "Compiler", "Automation", "QA"],
     "slug": "intel-system-test",
     "visibleInTimeline": true
@@ -34,7 +31,6 @@
     "organization": "Intel",
     "title": "Student Software Engineer",
     "description": "Developed and maintained internal cloud automation tools for Intel IT, including Cloud Helper—a self-service portal for requesting and provisioning cloud resources across Azure, AWS, GCP, and internal offerings. Also built analytics workflows for tracking cross-org initiatives and platform modernization efforts.",
-    "icon": "PC",
     "tags": ["React", "Node.js", "PostgreSQL", "Docker", "Cloud", "Automation"],
     "slug": "intel-cloud-automation",
     "visibleInTimeline": true
